@@ -21,11 +21,19 @@ body {
   there are no header styles yet!
 */
 
-/* Parent style */
+/* Parent styles */
 .content {
   text-align: center;
   font-style: normal;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
 }
 .logo-title {
   font-family: "Patua One", Arial, Helvetica, sans-serif;
@@ -48,10 +56,13 @@ body {
   padding: 5rem 0;
   margin: auto;
 }
+.flash-sec {
+  background-color: hsl(58, 97%, 70%);
+}
 
-/* Tablet dimensions */
+/* Tablet */
 @media (min-width: 768px) {
 }
-/* Desktop dimensions */
+/* Desktop */
 @media (min-width: 995px) {
 }
