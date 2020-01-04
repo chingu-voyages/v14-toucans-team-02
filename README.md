@@ -8,7 +8,7 @@ Landing page for a new Spanish learning app.
 - Dictionary/Translator
 - Responsive design
 
-## Tech Stack:
+## Tech Stack
 
 HTML, CSS, and JavaScript
 
