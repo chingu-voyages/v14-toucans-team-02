@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Patua+One|Roboto&display=swap");
-
+/* Boilerplate */
 html {
   box-sizing: border-box;
 }
@@ -13,6 +12,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* imports */
+@import url("https://fonts.googleapis.com/css?family=Patua+One|Roboto&display=swap");
+
 /*
   TODO header styles
   there are no header styles yet!
