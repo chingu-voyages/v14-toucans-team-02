@@ -32,7 +32,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+p {
   margin-top: 0;
 }
 h2 {
@@ -99,9 +100,16 @@ h2 {
   height: 425px;
   width: 350px;
 }
+.dict-container h2 {
+  margin-bottom: 0;
+}
 .dict-word {
   padding-top: 25px;
+  margin-bottom: 0;
   color: #34c8dc;
+}
+.dict-container hr {
+  width: 120px;
 }
 .activ-sec {
   background-color: var(--yellow);
