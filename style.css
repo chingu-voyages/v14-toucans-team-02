@@ -35,6 +35,15 @@ h5,
 h6 {
   margin-top: 0;
 }
+h2 {
+  font-size: 28px;
+}
+/* colors & variables*/
+:root {
+  --yellow: hsl(58, 97%, 70%);
+  --blue-shadow: hsl(187, 91%, 60%);
+}
+
 .logo-title {
   font-family: "Patua One", Arial, Helvetica, sans-serif;
   font-weight: normal;
@@ -49,7 +58,6 @@ h6 {
 .intro-sec {
   background-color: hsl(187, 91%, 60%);
   font-weight: bold;
-  font-size: 20px;
 }
 .intro-txt {
   width: 300px;
@@ -57,7 +65,7 @@ h6 {
   margin: auto;
 }
 .flash-sec {
-  background-color: hsl(58, 97%, 70%);
+  background-color: var(--yellow);
   padding-top: 50px;
   padding-bottom: 100px;
 }
@@ -74,7 +82,29 @@ h6 {
   line-height: 175px;
   margin: auto;
   background-color: white;
-  box-shadow: 0px 4px 4px #3adff6;
+  box-shadow: 0px 4px 4px var(--blue-shadow);
+}
+.dict-sec {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.dict-sec-txt {
+  margin: auto;
+  margin-bottom: 100px;
+  max-width: 300px;
+}
+.dict-container {
+  margin: auto;
+  box-shadow: 0px 4px 6px var(--blue-shadow);
+  height: 425px;
+  width: 350px;
+}
+.dict-word {
+  padding-top: 25px;
+  color: #34c8dc;
+}
+.activ-sec {
+  background-color: var(--yellow);
 }
 
 /* Tablet */
