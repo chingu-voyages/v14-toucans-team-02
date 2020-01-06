@@ -39,6 +39,9 @@ p {
 h2 {
   font-size: 28px;
 }
+button:hover {
+  cursor: pointer;
+}
 /* colors & variables*/
 :root {
   --yellow: hsl(58, 97%, 70%);
