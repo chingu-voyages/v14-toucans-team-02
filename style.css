@@ -83,10 +83,16 @@ button:hover {
 .card-container {
   width: 250px;
   height: 175px;
-  line-height: 175px;
   margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   box-shadow: 0px 4px 4px var(--blue-shadow);
+}
+.card-container h2 {
+  margin-bottom: 0px;
 }
 .dict-sec {
   padding-top: 50px;
@@ -141,7 +147,9 @@ button:hover {
 }
 @media (max-width: 767px) {
   /* Mobile hidden elements */
-  .intro-title {
+  .intro-title,
+  .td-red-flip,
+  .card-container img {
     display: none;
   }
 }
@@ -167,6 +175,30 @@ button:hover {
   }
   .intro-txt {
     padding-top: 0px;
+  }
+  .flash-sec {
+    display: grid;
+    grid-template-columns: 250px 400px;
+    grid-column-gap: 30px;
+    grid-template-areas:
+      "card title"
+      "card flipme";
+    justify-content: center;
+  }
+  .red-flip {
+    display: none;
+  }
+  .td-red-flip {
+    grid-area: flipme;
+    color: red;
+    padding-right: 50px;
+  }
+  .flash-title {
+    grid-area: title;
+    padding-left: 50px;
+  }
+  .card-container {
+    grid-area: card;
   }
 }
 /* Desktop */
