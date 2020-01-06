@@ -113,6 +113,15 @@ h2 {
 }
 .activ-sec {
   background-color: var(--yellow);
+  padding-top: 75px;
+  padding-bottom: 150px;
+}
+.activ-container {
+  max-width: 480px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
 }
 
 /* Tablet */
