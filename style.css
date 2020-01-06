@@ -136,8 +136,35 @@ h2 {
   font-size: 20px;
   font-weight: bold;
 }
+@media (max-width: 767px) {
+  /* Mobile hidden elements */
+  .intro-title {
+    display: none;
+  }
+}
 /* Tablet */
 @media (min-width: 768px) {
+  .logo-title {
+    padding-left: 25px;
+    padding-top: 25px;
+  }
+  .welcome {
+    display: none;
+  }
+  .intro-sec {
+    padding-top: 50px;
+  }
+  .intro-title {
+    padding-bottom: 0px;
+    font-family: "Patua One", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 42px;
+    padding-right: 60px;
+    margin-bottom: 20px;
+  }
+  .intro-txt {
+    padding-top: 0px;
+  }
 }
 /* Desktop */
 @media (min-width: 995px) {
