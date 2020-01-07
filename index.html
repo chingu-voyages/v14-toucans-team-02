@@ -15,23 +15,77 @@
         <!-- <button></button> -->
       </nav>
     </header>
-    <main class="content">
-      <section class="welcome-sec">
+    <main class="grid-container content">
+      <section class="grid-item welcome-sec">
         <h2 class="welcome">Welcome!</h2>
       </section>
-      <section class="intro-sec">
+      <section class="intro-sec grid-item">
         <h2 class="intro-txt">Learn Spanish while having fun</h2>
       </section>
 
       <!-- TODO -->
-      <section class="flash-sec"></section>
-      <section class="dict-sec"></section>
-      <section class="activ-sec"></section>
-      <section class="join-sec"></section>
+      <section class="flash-sec grid-item grid-sub-item">
+        <div class="sub-item">
+          <h2>Study with fun flashcards</h2>
+        </div>
+        <div class="sub-item outer-card-container">
+          <div class="card-container card-position">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <h1 id="front-card-text">Hola</h1>
+              </div>
+              <div class="flip-card-back">
+                <h1 id="back-card-text">Hello</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="dict-sec grid-item grid-sub-item">
+        <div class="sub-item">
+          <h2>Alphabet and Dictionary
+            as handy references</h2>
+        </div>
+        <div class="sub-item dict-container">
+          <div class="dict-section">
+            <form class="searchForm">
+              <label for="search">Search Word</label><br>
+              <input type="search" id="search" class="searchForm-input">
+              <select name="source" id="source">
+                <option value="en">English</option>
+                <option value="es">Spanish</option>
+              </select>
+              <select name="target" id="target">
+                <option value="en">Spanish</option>
+                <option value="es">English</option>
+              </select>
+              <button type="submit" class="submit">Submit</button>
+            </form>
+            <div class="dict-top" id="search-Results">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="activ-sec grid-item grid-sub-item grid-activity-mobile">
+        <div class="sub-item-mobile">
+          <h2>More Fun Activities</h2>
+        </div>
+        <div class="sub-item-mobile grid-third-item">
+          <div class="feat-item">Reading</div>
+          <div class="feat-item">Quizzes</div>
+          <div class="feat-item">Games</div>
+        </div>
+      </section>
+      <section class="join-sec grid-item">
+        <button type="submit" class="join-btn">Join Now</button>
+      </section>
       <!-- /TODO -->
     </main>
 
     <!-- TODO class rename footer -->
-    <footer></footer>
+    <footer>
+      <h5>Developed by the Toucans Team v14</h5>
+    </footer>
+    <script src="index.js"></script>
   </body>
 </html>

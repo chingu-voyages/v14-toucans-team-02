@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Patua+One|Roboto&display=swap");
 
-html {
+* {
   box-sizing: border-box;
 }
 *,
@@ -12,6 +12,21 @@ html,
 body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  width: auto;
+  height: auto;
+}
+
+footer {
+  text-align: center;
+  background-color: gray;
+  padding: 1rem 0;
+}
+
+footer h5 {
+  margin: 0;
 }
 /*
   TODO header styles
@@ -35,6 +50,9 @@ body {
   font-size: 19px;
   margin-bottom: 2.5rem;
 }
+
+/*   Introduction */
+
 .intro-sec {
   background-color: hsl(187, 91%, 60%);
   font-weight: bold;
@@ -46,9 +64,142 @@ body {
   margin: auto;
 }
 
+/* Flashcard  */
+
+.flash-sec {
+  background-color: yellow;
+}
+
+.card-container {
+  background-color: transparent;
+  width: 18rem;
+  height: 10rem;
+  perspective: 1000px;
+}
+
+.card-position {
+  margin: 0 auto;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-container:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #b3b;
+  color: black;
+  transform: rotateX(180deg);
+}
+
+/* ----- Dictionary & Translator Section ------*/
+
+.dict-sec {
+  background-color: hsl(187, 91%, 60%);
+}
+
+input {
+  background-color: whitesmoke;
+  line-height: 1.25rem;
+}
+
+/* ----- Activity Section ------*/
+
+.grid-activity-mobile {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.sub-item-mobile {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.grid-third-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+/* ---- Join Now ------*/
+
+.join-sec {
+  padding: 2rem 0;
+}
+
+.join-btn {
+  width: 38%;
+  height: 3rem;
+  background-color: hsl(356, 78%, 75%);
+  border-radius: 2rem;
+}
+
 /* Tablet dimensions */
 @media (min-width: 768px) {
+  .grid-container {
+    display: grid;
+  }
+
+  .grid-item {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding: 0.75rem;
+  }
+
+  .card-container {
+    width: 25rem;
+    height: 12rem;
+  }
 }
+
 /* Desktop dimensions */
 @media (min-width: 995px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  .grid-item {
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+
+  .grid-sub-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-third-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card-position {
+    margin: 0;
+  }
+
+  .card-container {
+    width: 25rem;
+    height: 12rem;
+  }
+  
 }
