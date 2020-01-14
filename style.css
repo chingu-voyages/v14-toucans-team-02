@@ -3,11 +3,11 @@
 html {
   box-sizing: border-box;
 }
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
+} */
 html,
 body {
   margin: 0;
@@ -23,7 +23,34 @@ body {
   text-align: center;
   font-style: normal;
   font-family: "Roboto";
+  padding: 16px;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 8px 8px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 .logo-title {
   font-family: "Patua One", Arial, Helvetica, sans-serif;
   font-weight: normal;
