@@ -145,9 +145,14 @@ button:hover {
 }
 .dict-sec-txt {
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   max-width: 300px;
 }
+
+form {
+  margin-bottom: 50px;
+}
+
 .dict-container {
   margin: auto;
   box-shadow: 0px 4px 6px var(--blue-shadow);

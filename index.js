@@ -40,11 +40,10 @@ card.addEventListener('mouseleave', () => {
 
 function handleSubmit(event) {
     event.preventDefault();
-
     const input = document.querySelector('.searchForm-input').value;
     const source = document.getElementById('source').value;
     const target = document.getElementById('target').value;
-
+   
     const searchQuery = input.trim();
   
     fetchResults(source, target, searchQuery);
@@ -62,29 +61,54 @@ function fetchResults(source, target, searchQuery) {
     })
     .then(response => response.json())
     .then(data => {
-        //const results = data.
-        console.log(data);
-        const partOfSpeech = data.outputs[0].output.matches[0].source.pos;
-        const words = data.outputs[0].output.matches[0].targets;
-        console.log(words);
-        console.log(partOfSpeech);
+        const output = [];
+        //const translation = {};
+        //const partOfSpeech = data.outputs[0].output.matches[0].source.pos;
+        const matches = data.outputs[0].output.matches;
+        matches.forEach( item => {
+            const word = item.source.term;
+            const translation = item.targets[0].lemma;
+            const position = item.source.pos;
+            //console.log(item.source);
+            output.push({ word: word, position: position, translation: translation });
+            //output.word = item.source.term;
+        });
+        console.log(output);
+        displayResults(output);
+        //console.log(partOfSpeech);
     })
-    .catch(() => console.log('An error occurred'));
+    .catch(() => errorResults());
 }
 
 function displayResults(results) {
-    const searchResults = document.getElementById('search-Results');
+    console.log(results);
+    const searchResults = document.querySelector('.dict-container');
 
     searchResults.innerHTML = '';
 
     results.forEach(result => {
         searchResults.insertAdjacentHTML('beforeend',
             `<div>
-                <h2></h2>
-                <h2></h2>
+                <h2 class="dict-word">${result.word}</h2>
+                <p>${result.position}</p>
+                <hr />
+                <h2>${result.translation}</h2>
             </div>`
-        )
-    })
+        );
+    });
+}
+
+function errorResults() {
+    //console.log(results);
+    const searchResults = document.querySelector('.dict-container');
+
+    searchResults.innerHTML = '';
+
+    searchResults.insertAdjacentHTML('beforeend',
+        `<div>
+            <h2>Whoops! Can't translate that!</h2>
+        </div>`
+    );
 }
 
 const form = document.querySelector('.searchForm');
