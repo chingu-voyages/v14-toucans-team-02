@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
 }
-/* *,
+ *,
 *:before,
 *:after {
   box-sizing: inherit;
@@ -39,7 +39,11 @@ body {
 #navbar {
   overflow: hidden;
   background-color: #333;
-}
+    margin: 0 2px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
 
 #navbar a {
   float: left;
@@ -51,11 +55,17 @@ body {
   font-size: 16px;
 }
 
+.logo {
+  float: left;
+  width: auto;
+}
+
 .logo-title {
   font-family: "Patua One", Arial, Helvetica, sans-serif;
   font-weight: normal;
   font-size: 36px;
   line-height: 44px;
+  text-align: center;
 }
 .welcome {
   font-weight: 600;
