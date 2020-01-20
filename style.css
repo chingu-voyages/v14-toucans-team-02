@@ -22,7 +22,7 @@ body {
 */
 
 /* Parent styles */
-.content {
+.content, footer {
   text-align: center;
   font-style: normal;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -137,6 +137,10 @@ button:hover {
   transform: rotateX(180deg);
 }
 
+.front-card-text, .back-card-text {
+  margin: 15%;
+}
+
 /*------- Dictionary/Translator -------*/
 
 .dict-sec {
@@ -148,12 +152,11 @@ button:hover {
   margin-bottom: 100px;
   max-width: 300px;
 }
-
 .dict-container {
   margin: auto;
   box-shadow: 0px 4px 6px var(--blue-shadow);
   height: 425px;
-  width: 350px;
+  width: 80%;
 }
 .dict-container h2 {
   margin-bottom: 0;
@@ -171,13 +174,16 @@ button:hover {
 
 .activ-sec {
   background-color: var(--yellow);
-  padding-top: 75px;
-  padding-bottom: 150px;
+  padding-top: 8%;
+  padding-bottom: 8%;
 }
 .activ-container {
   margin: auto;
   padding-top: 50px;
 }
+
+/*------- Join Button Section -------*/
+
 .join-sec {
   padding-bottom: 50px;
   padding-top: 50px;
@@ -192,10 +198,18 @@ button:hover {
   font-weight: bold;
 }
 
+/*------- Mobile Device Section -------*/
+
+.mobile-device-sec {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+/*------- Footer -------*/
+
 footer {
-  text-align: center;
   background-color: gray;
-  padding: 1rem 0;
+  padding: 5% 0;
 }
 
 @media (max-width: 767px) {
@@ -206,6 +220,7 @@ footer {
     display: none;
   }
 }
+
 
 /*------- Tablet --------*/
 
@@ -259,7 +274,9 @@ footer {
   .card-container {
     grid-area: card;
   }
-
+  .dict-container{
+    width: 50%;
+  }
   .mobile-device-sec {
     display: flex;
     justify-content: space-around;
@@ -273,5 +290,20 @@ footer {
   .activ-container {
     display: flex;
     justify-content: space-around;
+  }
+
+  .card-container {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dict-container{
+    width: 30%;
+  }
+
+  .flash-sec {
+    grid-template-columns: 400px 400px;
   }
 }
