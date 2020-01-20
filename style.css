@@ -1,5 +1,7 @@
+/* imports */
 @import url("https://fonts.googleapis.com/css?family=Patua+One|Roboto&display=swap");
 
+/* CSS boilerplate */
 html {
   box-sizing: border-box;
 }
@@ -13,29 +15,27 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /*
   TODO header styles
   there are no header styles yet!
 */
 
-/* Parent style */
-.content {
+/* Parent styles */
+.content, footer {
   text-align: center;
   font-style: normal;
-  font-family: "Roboto";
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   padding: 16px;
 }
-
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
 }
-
 .sticky + .content {
   padding-top: 60px;
 }
-
 #navbar {
   overflow: hidden;
   background-color: #333;
@@ -44,7 +44,6 @@ body {
     display: flex;
     justify-content: space-around;
   }
-
 #navbar a {
   float: left;
   display: block;
@@ -54,10 +53,29 @@ body {
   text-decoration: none;
   font-size: 16px;
 }
-
 .logo {
   float: left;
   width: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+}
+h2 {
+  font-size: 28px;
+}
+button:hover {
+  cursor: pointer;
+}
+/* colors & variables*/
+:root {
+  --yellow: hsl(58, 97%, 70%);
+  --blue-shadow: hsl(187, 91%, 60%);
 }
 
 .logo-title {
@@ -73,9 +91,8 @@ body {
   margin-bottom: 2.5rem;
 }
 .intro-sec {
-  background-color: hsl(187, 91%, 60%);
+  background-color: var(--blue-shadow);
   font-weight: bold;
-  font-size: 20px;
 }
 .intro-txt {
   width: 300px;
@@ -83,9 +100,241 @@ body {
   margin: auto;
 }
 
-/* Tablet dimensions */
-@media (min-width: 768px) {
+/*------- Flash Card Section -------*/
+
+.flash-sec {
+  background-color: var(--yellow);
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
-/* Desktop dimensions */
+.red-flip {
+  color: red;
+  padding-right: 220px;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 28px;
+}
+.card-container {
+  width: 250px;
+  height: 175px;
+  margin: auto;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;   /* <--- Placed the background-color and box-shadow in another class selector */
+}
+
+.card-position {
+  margin: 0 auto;
+}
+
+.inner-card-container {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.inner-card-container:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.card-container h2 {
+  margin-bottom: 0px;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  box-shadow: 0px 4px 4px var(--blue-shadow);
+}
+
+.flip-card-back {
+  background-color: palevioletred;
+  transform: rotateX(180deg);
+}
+
+.front-card-text, .back-card-text {
+  margin: 15%;
+}
+
+/*------- Dictionary/Translator -------*/
+
+.dict-sec {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+.dict-sec-txt {
+  margin: auto;
+  margin-bottom: 100px;
+  max-width: 300px;
+}
+.dict-container {
+  margin: auto;
+  box-shadow: 0px 4px 6px var(--blue-shadow);
+  height: 425px;
+  width: 80%;
+}
+.dict-container h2 {
+  margin-bottom: 0;
+}
+.dict-word {
+  padding-top: 25px;
+  margin-bottom: 0;
+  color: #34c8dc;
+}
+.dict-container hr {
+  width: 120px;
+}
+
+/*------- Activites Section --------*/
+
+.activ-sec {
+  background-color: var(--yellow);
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+.activ-container {
+  margin: auto;
+  padding-top: 50px;
+}
+
+/*------- Join Button Section -------*/
+
+.join-sec {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.join-sec button {
+  border: none;
+  background: #f19096;
+  border-radius: 25px;
+  width: 138px;
+  height: 55px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*------- Mobile Device Section -------*/
+
+.mobile-device-sec {
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+/*------- Footer -------*/
+
+footer {
+  background-color: gray;
+  padding: 5% 0;
+}
+
+@media (max-width: 767px) {
+  /*------ Mobile hidden elements -------*/
+  .intro-title,
+  .td-red-flip,
+  .card-container img {
+    display: none;
+  }
+}
+
+
+/*------- Tablet --------*/
+
+@media (min-width: 768px) {
+  .logo-title {
+    padding-left: 25px;
+    padding-top: 25px;
+  }
+  .activ-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  .welcome {
+    display: none;
+  }
+  .intro-sec {
+    padding-top: 50px;
+  }
+  .intro-title {
+    padding-bottom: 0px;
+    font-family: "Patua One", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 42px;
+    padding-right: 60px;
+    margin-bottom: 20px;
+  }
+  .intro-txt {
+    padding-top: 0px;
+  }
+  .flash-sec {
+    display: grid;
+    grid-template-columns: 250px 400px;
+    grid-column-gap: 30px;
+    grid-template-areas:
+      "card title"
+      "card flipme";
+    justify-content: center;
+  }
+  .red-flip {
+    display: none;
+  }
+  .td-red-flip {
+    grid-area: flipme;
+    color: red;
+    padding-right: 50px;
+  }
+  .flash-title {
+    grid-area: title;
+    padding-left: 50px;
+  }
+  .card-container {
+    grid-area: card;
+  }
+  .dict-container{
+    width: 50%;
+  }
+  .mobile-device-sec {
+    display: flex;
+    justify-content: space-around;
+  }
+  .one-third {
+    width: 30%;
+  }
+}
+/*------- Desktop -------*/
 @media (min-width: 995px) {
+  .activ-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .card-container {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .dict-container{
+    width: 30%;
+  }
+
+  .flash-sec {
+    grid-template-columns: 400px 400px;
+  }
 }

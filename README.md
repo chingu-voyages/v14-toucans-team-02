@@ -2,16 +2,14 @@
 
 Landing page for a new Spanish learning app.
 
-Features for the landing page will showcase include:
+**Feature set**
 
 - Flashcards
 - Dictionary/Translator
 - Responsive design
 
-## Technologies Currently Being Used:
+## Tech Stack
 
-HTML, CSS, JavaScript
+HTML, CSS, and JavaScript
 
 # v14-toucans-team-02
-
-Add-project-description-here | Voyage-14 | https://chingu.io/ | Twitter: https://twitter.com/ChinguCollabs
