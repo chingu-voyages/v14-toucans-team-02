@@ -48,3 +48,14 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+// Toggle button on mobile functionality
+
+function toggleHamburger() {
+    var x = document.getElementById("navbar");
+    if (x.className === "nav") {
+      x.className += " responsive";
+    } else {
+      x.className = "nav";
+    }
+  }

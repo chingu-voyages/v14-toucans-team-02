@@ -36,20 +36,18 @@ body {
   width: 100%;
   z-index: 1;
 }
-
 .sticky + .content {
   padding-top: 60px;
 }
-
-#navbar {
+/* #navbar {
   overflow: hidden;
   background-color: #333;
   margin: 0 2px;
   padding: 0;
   display: flex;
   justify-content: space-around;
-}
-#navbar a {
+} */
+/* #navbar a {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -61,7 +59,7 @@ body {
 .logo {
   float: left;
   width: auto;
-}
+} */
 h1,
 h2,
 h3,
@@ -255,6 +253,32 @@ footer {
   .card-container img {
     display: none;
   }
+
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* #navbar a {
+    float: left;
+    display: block;
+  } */
+
+  #navbar a.nav-item {display: none};
+
+  #navbar.responsive {position: relative;}
+  #navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  #navbar.responsive a.nav-item {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
 }
 
 
@@ -265,6 +289,34 @@ footer {
     padding-left: 25px;
     padding-top: 25px;
   }
+
+  #navbar {
+    overflow: hidden;
+    background-color: #333;
+    margin: 0 2px;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  #navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 8px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  #navbar a.icon {
+    display: none;
+  }
+
+  .logo {
+    float: left;
+    width: auto;
+  }
+
   .activ-container {
     display: flex;
     justify-content: space-around;
@@ -331,6 +383,10 @@ footer {
   .card-container {
     width: 400px;
     height: 200px;
+  }
+
+  #navbar .icon {
+    display: none;
   }
 }
 
