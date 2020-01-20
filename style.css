@@ -145,12 +145,8 @@ button:hover {
 }
 .dict-sec-txt {
   margin: auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   max-width: 300px;
-}
-
-form {
-  margin-bottom: 50px;
 }
 
 .dict-container {
@@ -170,16 +166,16 @@ form {
 .dict-container hr {
   width: 120px;
 }
+
+/*------- Activites Section --------*/
+
 .activ-sec {
   background-color: var(--yellow);
   padding-top: 75px;
   padding-bottom: 150px;
 }
 .activ-container {
-  max-width: 480px;
   margin: auto;
-  display: flex;
-  justify-content: space-around;
   padding-top: 50px;
 }
 .join-sec {
@@ -195,19 +191,32 @@ form {
   font-size: 20px;
   font-weight: bold;
 }
+
+footer {
+  text-align: center;
+  background-color: gray;
+  padding: 1rem 0;
+}
+
 @media (max-width: 767px) {
-  /* Mobile hidden elements */
+  /*------ Mobile hidden elements -------*/
   .intro-title,
   .td-red-flip,
   .card-container img {
     display: none;
   }
 }
-/* Tablet */
+
+/*------- Tablet --------*/
+
 @media (min-width: 768px) {
   .logo-title {
     padding-left: 25px;
     padding-top: 25px;
+  }
+  .activ-container {
+    display: flex;
+    justify-content: space-around;
   }
   .welcome {
     display: none;
@@ -250,7 +259,19 @@ form {
   .card-container {
     grid-area: card;
   }
+
+  .mobile-device-sec {
+    display: flex;
+    justify-content: space-around;
+  }
+  .one-third {
+    width: 30%;
+  }
 }
-/* Desktop */
+/*------- Desktop -------*/
 @media (min-width: 995px) {
+  .activ-container {
+    display: flex;
+    justify-content: space-around;
+  }
 }
