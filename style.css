@@ -12,23 +12,13 @@ html, body {
 *:after {
   box-sizing: inherit;
 }
-/* html,
-body {
-  margin: 0;
-  padding: 0;
-} */
-
-/*
-  TODO header styles
-  there are no header styles yet!
-*/
 
 /* Parent styles */
 .content, footer {
   text-align: center;
   font-style: normal;
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  padding: 16px;
+  padding-top: 20px;
 }
 .sticky {
   position: fixed;
@@ -39,27 +29,12 @@ body {
 .sticky + .content {
   padding-top: 60px;
 }
-/* #navbar {
-  overflow: hidden;
-  background-color: #333;
-  margin: 0 2px;
-  padding: 0;
-  display: flex;
-  justify-content: space-around;
-} */
-/* #navbar a {
-  float: left;
+
+.nav a.icon {
+  float: right;
   display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 8px 8px;
-  text-decoration: none;
-  font-size: 16px;
 }
-.logo {
-  float: left;
-  width: auto;
-} */
+
 h1,
 h2,
 h3,
@@ -88,18 +63,13 @@ button:hover {
   line-height: 44px;
   text-align: center;
 }
-.welcome {
-  font-weight: 600;
-  font-size: 19px;
-  margin-bottom: 2.5rem;
-}
 .intro-sec {
   background-color: var(--blue-shadow);
   font-weight: bold;
+  padding: 25% 0;
 }
 .intro-txt {
   width: 300px;
-  padding: 5rem 0;
   margin: auto;
 }
 
@@ -125,6 +95,10 @@ button:hover {
   flex-flow: column;
   justify-content: center;
   align-items: center;   /* <--- Placed the background-color and box-shadow in another class selector */
+}
+
+.card-container:hover {
+  cursor: pointer;
 }
 
 .card-position {
@@ -242,13 +216,18 @@ button:hover {
 /*------- Footer -------*/
 
 footer {
-  background-color: gray;
+  background-color: hsl(187, 91%, 60%);
   padding: 5% 0;
+}
+
+.icon-credit {
+  width: 80%;
+  text-align: left;
+  margin-left: 5%;
 }
 
 @media (max-width: 767px) {
   /*------ Mobile hidden elements -------*/
-  .intro-title,
   .td-red-flip,
   .card-container img {
     display: none;
@@ -258,14 +237,9 @@ footer {
     overflow: hidden;
     background-color: #333;
   }
-  
-  /* #navbar a {
-    float: left;
-    display: block;
-  } */
 
   #navbar a.nav-item {display: none};
-
+  
   #navbar.responsive {position: relative;}
   #navbar.responsive a.icon {
     position: absolute;
@@ -321,11 +295,8 @@ footer {
     display: flex;
     justify-content: space-around;
   }
-  .welcome {
-    display: none;
-  }
   .intro-sec {
-    padding-top: 50px;
+    padding: 10% 0;
   }
   .intro-title {
     padding-bottom: 0px;
@@ -371,6 +342,10 @@ footer {
   }
   .one-third {
     width: 30%;
+  }
+
+  .icon-credit {
+    padding-top: 5%;
   }
 }
 /*------- Desktop -------*/
