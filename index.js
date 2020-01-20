@@ -12,7 +12,6 @@ const words = [
 const card = document.querySelector('.card-container');
 const frontCardText = document.getElementById('front-card-text');
 let text = frontCardText.innerText;
-console.log(text);
 const backCardText = document.getElementById('back-card-text');
 
 card.addEventListener('mouseenter', () => {
